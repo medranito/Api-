@@ -1,0 +1,37 @@
+89 % de almacenamiento usado … Si te quedas sin espacio, no podrás guardar archivos en Drive ni usar Gmail. Disfruta de 100 GB de almacenamiento por US$ 1,99 US$ 0,99 durante 1 mes.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokémon App</title>
+  <link rel="stylesheet" href="prueba2.css" />
+</head>
+<body>
+
+  <section id="carousel" class="carousel"></section>
+
+  <section id="search">
+    <input type="text" id="searchInput" placeholder="Buscar por nombre o número" />
+    <button id="searchBtn">Buscar</button>
+  </section>
+
+  <section id="filters">
+    <select id="typeFilter">
+      <option value="">Todos los tipos</option>
+    </select>
+
+    <select id="weightFilter">
+      <option value="">Todos los pesos</option>
+      <option value="light">Ligero (&lt; 50)</option>
+      <option value="medium">Medio (50 - 150)</option>
+      <option value="heavy">Pesado (&gt; 150)</option>
+    </select>
+
+    <input type="text" id="nameFilter" placeholder="Filtrar por nombre" />
+  </section>
+
+  <section id="pokemonList"></section>
+
+  <script src="prueba2.js"></script>
+</body>
+</html>
