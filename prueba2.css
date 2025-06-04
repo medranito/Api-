@@ -1,0 +1,83 @@
+89 % de almacenamiento usado … Si te quedas sin espacio, no podrás guardar archivos en Drive ni usar Gmail. Disfruta de 100 GB de almacenamiento por US$ 1,99 US$ 0,99 durante 1 mes.
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color:darkslategrey;
+}
+
+/* Carrusel básico */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  gap: 10px;
+  background-color: #222;
+}
+
+.carousel img {
+  height: 120px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel img:hover {
+  transform: scale(1.1);
+}
+
+/* Buscador */
+#search {
+  margin: 20px 0;
+}
+
+#search input {
+  padding: 8px;
+  width: 250px;
+  font-size: 16px;
+}
+
+#search button {
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Filtros */
+#filters {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#filters select,
+#filters input {
+  padding: 6px;
+  font-size: 14px;
+}
+
+/* Lista de pokémon */
+#pokemonList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+  gap: 15px;
+}
+
+.pokemon-card {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border: color( black);
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  border: #222;
+}
+
+.pokemon-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
