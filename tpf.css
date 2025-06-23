@@ -1,0 +1,164 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: darkslategrey;
+}
+
+/* Contenedor del título + carrusel */
+#header {
+  display: flex;
+  flex-direction: row-reverse; /* Título a la derecha, carrusel a la izquierda */
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  padding: 10px;
+  margin-bottom: 30px; /* espacio con los filtros */
+  border-radius: 10px;
+}
+
+/* Título de la página */
+#pageTitle {
+    color: white;
+  font-size: 28px;
+  margin-right: 40px; /* lo corre más a la izquierda */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  cursor: pointer;
+}
+
+/* Carrusel básico dentro de header */
+#carousel {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+#carousel img {
+  height: 120px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#carousel img:hover {
+  transform: scale(1.1);
+}
+
+/* Filtros centrados */
+#filters {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Inputs y selects de filtros */
+#filters select,
+#filters input {
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#filters input:focus,
+#filters select:focus {
+  outline: none;
+  border-color: #555;
+}
+
+/* Lista de Pokémon */
+#pokemonList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.pokemon-card {
+  position: relative;
+  background: black;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: white;
+  overflow: hidden;
+  min-height: 250px;
+  transition: all 0.5s ease;
+}
+
+.pokemon-card.expanded {
+  min-height: 400px; /* expandida más alta */
+}
+
+/* Links de nombre blanco */
+.pokemon-card h3 a {
+  color: white;
+  text-decoration: none;
+}
+
+.pokemon-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.pokemon-card p {
+  color: white;
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  border: #222;
+}
+
+/* Detalles que se muestran al expandir */
+.details {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  margin-top: 10px;
+}
+
+.details.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Evoluciones verticales y más chicas */
+.evolution-chain {
+  display: flex;
+  flex-direction: column; /* Vertical */
+  align-items: center;
+  gap: 5px;
+}
+
+.evolution {
+  text-align: center;
+}
+
+.evolution img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Buscador antiguo (no usado) */
+#search {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#search input,
+#search button {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#search input:focus {
+  outline: none;
+  border-color: #555;
+}
