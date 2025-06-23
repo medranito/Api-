@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokédex App</title>
+  <link rel="stylesheet" href="tpf.css" />
+</head>
+<body>
+
+  <!-- Título y Carrusel juntos -->
+  <section id="header">
+<h1 id="pageTitle" onclick="location.reload()">Hunterpoke</h1>
+    <div id="carousel" class="carousel"></div>
+  </section>
+
+  <!-- Filtros centrados -->
+  <section id="filters">
+    <select id="typeFilter">
+      <option value="">Todos los tipos</option>
+    </select>
+
+    <select id="weightFilter">
+      <option value="">Todos los pesos</option>
+      <option value="light">Ligero (&lt; 50)</option>
+      <option value="medium">Medio (50 - 150)</option>
+      <option value="heavy">Pesado (&gt; 150)</option>
+    </select>
+
+    <!-- Input único: filtra por nombre o número -->
+    <input type="text" id="nameFilter" placeholder="Filtrar por nombre o número" />
+  </section>
+
+  <!-- Listado de Pokémon -->
+  <section id="pokemonList"></section>
+
+  <script src="tpf.js"></script>
+</body>
+</html>
